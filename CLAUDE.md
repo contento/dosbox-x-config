@@ -2,7 +2,7 @@
 
 Guidance for Claude Code when working in this repository.
 
-> **Sync note**: this file and [copilot-instructions.md](copilot-instructions.md) cover the same project guidance for different assistants. When you change one, update the other so both stay aligned. Project tasks live in [TODO.md](TODO.md) — keep it current as work lands or new items surface.
+> **Sync note**: this file and [.github/copilot-instructions.md](.github/copilot-instructions.md) cover the same project guidance for different assistants. When you change one, update the other so both stay aligned. Project tasks live in [TODO.md](TODO.md) — keep it current as work lands or new items surface.
 
 ## What this repo is
 

@@ -33,6 +33,6 @@ if (-not (Test-Path $Destination)) {
     New-Item -ItemType Directory -Path $Destination -Force | Out-Null
 }
 
-$destinationPath = Join-Path $Destination 'DOSBox-X 2026.05.02 Preferences'
+$destinationPath = Join-Path $Destination 'dosbox-x-2026.05.02.conf'
 Copy-Item -Path $source -Destination $destinationPath -Force
 Write-Host "Installed $source -> $destinationPath" -ForegroundColor Green

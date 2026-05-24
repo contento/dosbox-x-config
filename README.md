@@ -28,10 +28,11 @@ Suggested public GitHub repository name: `contento/dosbox-x-config`
 
 ## Install
 
+Run from the repo root.
+
 ### macOS
 
 ```bash
-cd ~/Projects/contento/windows-scripts/dosbox-x-config
 ./install-config.sh
 ```
 
@@ -40,7 +41,6 @@ This copies `DOSBox-X.Preferences` into `~/Library/Preferences/DOSBox-X 2026.05.
 ### Linux
 
 ```bash
-cd ~/Projects/contento/windows-scripts/dosbox-x-config
 ./install-config.sh
 ```
 
@@ -49,27 +49,24 @@ This copies the repo preferences into `~/.config/dosbox-x/dosbox-x.conf`.
 ### Windows
 
 ```powershell
-cd $HOME\Projects\contento\windows-scripts\dosbox-x-config
 .\install-config.ps1
 ```
 
-By default, this installs to `$Env:LOCALAPPDATA\DOSBox-X\DOSBox-X 2026.05.02 Preferences`.
+By default, this installs to `$Env:LOCALAPPDATA\DOSBox-X\dosbox-x-2026.05.02.conf` — the versioned filename DOSBox-X reads on Windows.
 Use `-Destination` to override the path if your installation stores preferences elsewhere.
 
 ## Sync
 
-Push host → repo (after editing in DOSBox-X's UI):
+Run from the repo root. Push host → repo (after editing in DOSBox-X's UI):
 
 ```bash
-cp ~/Library/Preferences/"DOSBox-X "*" Preferences" \
-   ~/Projects/contento/windows-scripts/dosbox-x-config/DOSBox-X.Preferences
+cp ~/Library/Preferences/"DOSBox-X "*" Preferences" ./DOSBox-X.Preferences
 ```
 
 Push repo → host:
 
 ```bash
-cp ~/Projects/contento/windows-scripts/dosbox-x-config/DOSBox-X.Preferences \
-   ~/Library/Preferences/"DOSBox-X 2026.05.02 Preferences"
+cp ./DOSBox-X.Preferences ~/Library/Preferences/"DOSBox-X 2026.05.02 Preferences"
 ```
 
 Adjust the version string to match whichever DOSBox-X build is installed.
@@ -77,7 +74,7 @@ Adjust the version string to match whichever DOSBox-X build is installed.
 ## Diff against the initiator
 
 ```bash
-diff -u dosbox-x-config/DOSBox-X.Preferences.initiator dosbox-x-config/DOSBox-X.Preferences
+diff -u DOSBox-X.Preferences.initiator DOSBox-X.Preferences
 ```
 
 ## Notes

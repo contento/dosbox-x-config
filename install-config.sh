@@ -24,7 +24,7 @@ case "$platform" in
     echo "Use install-config.ps1 on Windows or copy the file manually."
     exit 1
     ;;
- esac
+esac
 
 mkdir -p "$dest_dir"
 cp -f "$source_file" "$dest_dir/$dest_file"
