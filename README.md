@@ -1,5 +1,13 @@
 # DOSBox-X Config
 
+```text
+  o  o
+\______/
+  |
+     |    https://conten.to
+--------
+```
+
 Stand-alone repository for a canonical DOSBox-X user preferences file and global defaults.
 
 Suggested public GitHub repository name: `contento/dosbox-x-config`
