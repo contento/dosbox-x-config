@@ -8,15 +8,16 @@ Working task list for `dosbox-x-config`.
 
 ### Documentation drift — high priority
 
-[dosbox-x-global-defaults.md](dosbox-x-global-defaults.md) describes recommended values that no longer match what's actually shipped in [DOSBox-X.Preferences](DOSBox-X.Preferences). Pick one direction (doc → matches file, or file → matches doc) and reconcile:
+[dosbox-x-global-defaults.md](dosbox-x-global-defaults.md) describes recommended values that no longer match what's actually shipped in [DOSBox-X.Preferences](DOSBox-X.Preferences). [README.md](README.md) now also surfaces a short "Highlights vs stock DOSBox-X" list pulled from the actual file values — when reconciling, keep all three in sync. Pick one direction (doc → matches file, or file → matches doc) and reconcile:
 
-| Setting | Doc says | Actual file |
-| --- | --- | --- |
-| `[dosbox] memsize` | `32` | `256` ([DOSBox-X.Preferences:250](DOSBox-X.Preferences#L250)) |
-| `[render] scaler` | `normal2x` | `advmame3x` ([DOSBox-X.Preferences:326](DOSBox-X.Preferences#L326)) |
-| `[cpu] core` | _(not mentioned)_ | `dynamic_x86` ([DOSBox-X.Preferences:530](DOSBox-X.Preferences#L530)) |
-| `[cpu] cputype` | `pentium_mmx` | `pentium_iii` ([DOSBox-X.Preferences:534](DOSBox-X.Preferences#L534)) |
-| `[cpu] cycles` | `max` | `max 105%` ([DOSBox-X.Preferences:535](DOSBox-X.Preferences#L535)) |
+| Setting | Doc says | Actual file | README highlight |
+| --- | --- | --- | --- |
+| `[dosbox] memsize` | `32` | `256` ([DOSBox-X.Preferences:250](DOSBox-X.Preferences#L250)) | `256` |
+| `[render] scaler` | `normal2x` | `normal2x` ([DOSBox-X.Preferences:326](DOSBox-X.Preferences#L326)) ✅ matches | `normal2x` |
+| `[cpu] core` | _(not mentioned)_ | `dynamic_x86` ([DOSBox-X.Preferences:530](DOSBox-X.Preferences#L530)) | `dynamic_x86` |
+| `[cpu] cputype` | `pentium_mmx` | `pentium_iii` ([DOSBox-X.Preferences:534](DOSBox-X.Preferences#L534)) | `pentium_iii` |
+| `[cpu] cycles` | `max` | `max 105%` ([DOSBox-X.Preferences:535](DOSBox-X.Preferences#L535)) | `max 105%` |
+| `[sdl] output` | _(not mentioned)_ | `openglpp` ([DOSBox-X.Preferences:85](DOSBox-X.Preferences#L85)) | `openglpp` |
 
 ### Repository hygiene
 

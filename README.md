@@ -20,6 +20,17 @@ Suggested public GitHub repository name: `contento/dosbox-x-config`
 - `install-config.sh` — installer for macOS and Linux.
 - `install-config.ps1` — installer for Windows.
 
+## Highlights vs stock DOSBox-X
+
+This config is a tuned preferences file — no engine modifications. The most notable changes over a fresh DOSBox-X install:
+
+- **Memory** — `memsize=256` MB for headroom on late-DOS / early-Win9x titles.
+- **CPU** — `core=dynamic_x86`, `cputype=pentium_iii`, `cycles=max 105%` for stronger emulation throughput.
+- **Scaler** — `scaler=normal2x` for crisp integer pixel-doubling (no edge smoothing).
+- **Output** — `output=openglpp` (OpenGL pixel-perfect): nearest-neighbor sampling with integer scaling, so each emulated pixel maps to an exact N×N block on screen. Sharpest result for retro content.
+
+See [dosbox-x-global-defaults.md](dosbox-x-global-defaults.md) for the full section-by-section rationale.
+
 ## Supported platforms
 
 - macOS

@@ -82,7 +82,7 @@ fullresolution    = desktop
 windowresolution  = original
 windowposition    = -
 display           = 0
-output            = opengl
+output            = openglpp
 videodriver       = 
 transparency      = 0
 maximize          = false
@@ -323,7 +323,7 @@ aspect_ratio   = 0:0
 char9          = true
 euro           = -1
 doublescan     = true
-scaler         = advmame3x
+scaler         = normal2x
 glshader       = none
 pixelshader    = none
 autofit        = true
@@ -1454,7 +1454,17 @@ biosps2 = true
 
 [autoexec]
 @echo off
-rem No DOSKEY here: DOSKEY is not available on the Z:\ drive, only on
-rem a real DOS install mounted via IMGMOUNT. Per-project autoexec
-rem blocks that mount a DOS image can add their own DOSKEY macros.
+rem Unix-style command aliases via DOSBox-X's internal ALIAS command
+rem (works on Z:\, unlike DOSKEY which only loads from a real DOS install
+rem mounted via IMGMOUNT). Per-project autoexec blocks that mount a DOS
+rem image can layer DOSKEY macros on top.
 rem DOSBox-X already provides a built-in `ls` on Z:\.
+alias cat=type
+alias clear=cls
+alias rm=del
+alias cp=copy
+alias mv=move
+alias pwd=cd
+alias grep=find
+alias less=more
+alias man=help
