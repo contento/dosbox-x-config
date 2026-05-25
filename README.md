@@ -26,8 +26,10 @@ This config is a tuned preferences file — no engine modifications. The most no
 
 - **Memory** — `memsize=256` MB for headroom on late-DOS / early-Win9x titles.
 - **CPU** — `core=dynamic_x86`, `cputype=pentium_iii`, `cycles=max 105%` for stronger emulation throughput.
-- **Scaler** — `scaler=normal2x` for crisp integer pixel-doubling (no edge smoothing).
-- **Output** — `output=openglpp` (OpenGL pixel-perfect): nearest-neighbor sampling with integer scaling, so each emulated pixel maps to an exact N×N block on screen. Sharpest result for retro content.
+- **Output** — `output=openglpp` (OpenGL pixel-perfect): nearest-neighbor sampling with integer scaling, so each emulated pixel maps to an exact N×N block on screen.
+- **Scaler** — `scaler=none` so the GL output is the only scaling stage.
+- **Aspect** — `aspect=false`: text mode (720×400) already has the proportions we want, and aspect correction would force a non-integer source size that breaks pixel-perfect scaling. Toggle on per-game via the menu for old 320×200 mode-13h titles.
+- **Autoexec aliases** — Unix-style aliases (`cat`/`rm`/`cp`/`mv`/`grep`/…) wired up via DOSBox-X's `ALIAS` command, then `cls` clears the boot-time echo for a clean prompt.
 
 See [dosbox-x-global-defaults.md](dosbox-x-global-defaults.md) for the full section-by-section rationale.
 

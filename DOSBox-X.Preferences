@@ -318,12 +318,12 @@ vmemsize = 8
 # -> modeswitch; xbrz slice; xbrz fixed scale factor; xbrz max scale factor
 #
 frameskip      = 0
-aspect         = true
+aspect         = false
 aspect_ratio   = 0:0
 char9          = true
 euro           = -1
 doublescan     = true
-scaler         = normal2x
+scaler         = none
 glshader       = none
 pixelshader    = none
 autofit        = true
@@ -1468,3 +1468,4 @@ alias pwd=cd
 alias grep=find
 alias less=more
 alias man=help
+cls
